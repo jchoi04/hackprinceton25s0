@@ -1,0 +1,81 @@
+import React from 'react';
+import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import { useRouter } from 'expo-router';
+import BottomNav from '../components/BottomNav'; // Importing BottomNav component
+
+export default function Chat() {
+  const router = useRouter();
+
+  const handleStartNewConversation = () => {
+    router.push('/convo');
+  };
+
+  return (
+    <View style={styles.container}>
+      {/* Header and description */}
+      <View style={styles.header}>
+        <Text style={styles.title}>ReadyMedi</Text>
+        <Text style={styles.description}>
+          Chat with ReadyMedi, your AI health assistant for personalized recovery support. Ask questions, log symptoms, and get smart recommendations—all in one place.
+        </Text>
+      </View>
+
+      {/* Chat assistant image */}
+      <Image source={require('../assets/images/chat.png')} style={styles.image} />
+
+      {/* Start a new conversation button */}
+      <TouchableOpacity
+        onPress={handleStartNewConversation}
+        style={styles.startButton}
+      >
+        <Text style={styles.buttonText}>Start a new conversation</Text>
+      </TouchableOpacity>
+
+      {/* Bottom Navigation Bar */}
+      <BottomNav active="chat" />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    paddingHorizontal: 24,
+  },
+  header: {
+    alignItems: 'center',
+    marginTop: 50,
+  },
+  title: {
+    fontSize: 36,
+    fontWeight: 'bold',
+    color: '#9CB69C',
+  },
+  description: {
+    fontSize: 16,
+    color: '#9CB69C',
+    textAlign: 'center',
+    marginTop: 20,
+  },
+  image: {
+    marginTop: 40,
+    width: 150,
+    height: 150,
+    resizeMode: 'contain',
+  },
+  startButton: {
+    backgroundColor: '#9CB69C',
+    paddingVertical: 14,
+    paddingHorizontal: 24,
+    borderRadius: 12,
+    marginTop: 40,
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '500',
+    textAlign: 'center',
+  },
+});
