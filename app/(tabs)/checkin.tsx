@@ -74,7 +74,7 @@ const Checkin = () => {
 
       {/* Add image slot */}
       <Image
-        source={require('../../assets/images/chat.png')} // Add your image here
+        source={require('../../assets/images/checkin.png')} // Add your image here
         style={styles.image}
         resizeMode="contain"
       />

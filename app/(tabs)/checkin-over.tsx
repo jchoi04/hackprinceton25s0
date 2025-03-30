@@ -23,7 +23,7 @@ const AwesomePage = () => {
 
       {/* Image Placeholder */}
       <Image
-        source={require('../../assets/images/chat.png')} // Adjust with the actual path to your image
+        source={require('../../assets/images/checkin-over.png')} // Adjust with the actual path to your image
         style={styles.characterImage}
         resizeMode="contain"
       />

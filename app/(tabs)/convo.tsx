@@ -22,7 +22,7 @@ export default function Convo() {
       {/* Header and chat display */}
       <View style={styles.header}>
         <Text style={styles.title}>Speaking with: ReadyMedi</Text>
-        <Image source={require('../assets/images/chat.png')} style={styles.image} />
+        <Image source={require('../../assets/images/chat.png')} style={styles.image} />
       </View>
 
       <ScrollView contentContainerStyle={styles.chatContainer}>
